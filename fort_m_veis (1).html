@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fort' Móveis | Marcenaria Especializada em Itaúna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-blend { mix-blend-mode: multiply; }
+        .masonry { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+        #lightbox { display: none; }
+        #lightbox.active { display: flex; }
+        
+        /* Hero Visual Element Styles */
+        .stack-item { transition: transform 0.3s ease-out; }
+        .hero-graphic:hover .stack-item { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="w-full bg-[#f4efe8] py-6 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="w-32">
+                <img src="https://i.ibb.co/LhD1nBG8/logo.png" alt="Logo Fort' Móveis" class="w-full h-auto logo-blend">
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide text-gray-800">
+                <a href="#inicio" class="hover:text-amber-700 transition">Início</a>
+                <a href="#projetos" class="hover:text-amber-700 transition">Projetos</a>
+                <a href="#transformacao" class="hover:text-amber-700 transition">Transformação</a>
+                <a href="#depoimentos" class="hover:text-amber-700 transition">Clientes</a>
+                <a href="#contato" class="hover:text-amber-700 transition">Contato</a>
+            </nav>
+            <a href="https://wa.me/5537999225481" class="border border-gray-900 px-6 py-2 text-sm font-semibold hover:bg-gray-900 hover:text-white transition rounded-sm">Orçamento</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="py-24 px-6 bg-[#f4efe8]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <!-- Left: Text Content -->
+            <div class="max-w-xl">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-8">
+                    Marcenaria com método. Projetos sob medida.
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed mb-10 font-light">
+                    Do desenho técnico à instalação final, gerenciamos cada etapa da produção para garantir a durabilidade e o acabamento que o seu projeto exige.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="https://wa.me/5537999225481" class="bg-gray-900 text-white px-8 py-4 font-semibold hover:bg-amber-800 transition text-center shadow-lg rounded-sm">Solicitar orçamento</a>
+                    <a href="#projetos" class="bg-transparent border border-gray-300 text-gray-900 px-8 py-4 font-semibold hover:border-gray-900 transition text-center rounded-sm">Conheça nossos projetos</a>
+                </div>
+                
+                <div class="flex flex-wrap gap-8 text-sm font-medium text-gray-700">
+                    <div class="flex items-center gap-2">🛠 Fabricação própria</div>
+                    <div class="flex items-center gap-2">📐 Projeto personalizado</div>
+                    <div class="flex items-center gap-2">🏠 Residencial e Comercial</div>
+                </div>
+            </div>
+
+            <!-- Right: Material Stack Graphic (Graphic Element) -->
+            <div class="hero-graphic relative hidden md:block h-[400px]">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <!-- Layer 1 -->
+                    <div class="stack-item absolute w-72 h-48 bg-[#d1c4b5] shadow-xl border border-[#c4b5a5]" style="transform: rotate(-10deg) translate(-20px, 20px);"></div>
+                    <!-- Layer 2 -->
+                    <div class="stack-item absolute w-72 h-48 bg-[#c4b5a5] shadow-xl border border-[#bca691]" style="transform: rotate(5deg) translate(10px, -10px);"></div>
+                    <!-- Layer 3 -->
+                    <div class="stack-item absolute w-72 h-48 bg-[#bca691] shadow-2xl border border-[#a89582]" style="transform: rotate(-2deg) translate(0px, 0px);"></div>
+                    <!-- Detail lines for "panel" feel -->
+                    <div class="absolute w-20 h-full border-r border-gray-900/10" style="left: 60%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-20 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Projetos que transformaram ambientes</h2>
+        <p class="text-gray-500 mb-12 max-w-xl">Cada projeto é pensado para aproveitar melhor o espaço, valorizar o ambiente e atender às necessidades de cada cliente.</p>
+        <div class="masonry">
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/Jj7cWJCf/Save-Clip-App-620497300-18079668257195515-2082322624471436865-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/TxVZ6dPw/Save-Clip-App-618801257-17996524313877660-3438933948521094443-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/SwSYnYjL/Save-Clip-App-621381693-18046071380504447-3437713101805939202-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/Cqb5GYN/Save-Clip-App-652775582-18074060966394726-4384486715438308669-n.webp" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/bMwjFYc5/Save-Clip-App-649546906-18083553455521860-8064462384504927918-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/xS6qbM9S/Save-Clip-App-610493695-18076530242521860-5428541263548724110-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/Y4GrgrrW/Save-Clip-App-527491432-18059888624521860-5108734576164604752-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/CKyjjrmT/Save-Clip-App-501409360-17953392641954430-7583733572475342478-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/Zz87qnjR/Save-Clip-App-626006310-18109546618589009-3135264956210681479-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/2w3mxqS/Save-Clip-App-655842904-18166032253416723-5307181545890570598-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/Q3XcHGLP/Save-Clip-App-655239752-18124266796519781-5498626969653725879-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="masonry-item cursor-pointer overflow-hidden rounded shadow-sm group" onclick="openLightbox(this.querySelector('img').src)"><img src="https://i.ibb.co/gMzCKrWF/Save-Clip-App-652794085-18038033960774024-5268478706673396542-n.jpg" class="w-full transition-transform duration-700 group-hover:scale-105"></div>
+        </div>
+    </section>
+
+    <!-- Before/After -->
+    <section id="transformacao" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Antes e Depois</h2>
+            <p class="text-gray-600 mb-12 max-w-xl">Cada projeto é pensado para aproveitar melhor o espaço, valorizar o ambiente e atender às necessidades de cada cliente. Veja um exemplo real da transformação realizada pela Fort' Móveis.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-2"><div class="overflow-hidden rounded shadow-md"><img src="https://i.ibb.co/3yYnzjsg/Save-Clip-App-662500977-18164322856421190-1025569515553641255-n.jpg" class="w-full h-auto"></div><p class="text-sm font-bold tracking-widest text-amber-700 uppercase pt-2">Antes</p></div>
+                <div class="space-y-2"><div class="overflow-hidden rounded shadow-md"><img src="https://i.ibb.co/Vpx1SyZ0/Save-Clip-App-654572411-18012834635836404-6418847888004167529-n.jpg" class="w-full h-auto"></div><p class="text-sm font-bold tracking-widest text-green-700 uppercase pt-2">Depois</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Como trabalhamos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center"><div class="text-3xl mb-4">📐</div><h3 class="font-bold mb-2">1. Projeto</h3><p class="text-sm text-gray-600">Entendemos sua necessidade e criamos o design ideal para o seu espaço.</p></div>
+                <div class="text-center"><div class="text-3xl mb-4">🛠</div><h3 class="font-bold mb-2">2. Fabricação</h3><p class="text-sm text-gray-600">Produção própria com materiais selecionados e tecnologia de ponta.</p></div>
+                <div class="text-center"><div class="text-3xl mb-4">✨</div><h3 class="font-bold mb-2">3. Instalação</h3><p class="text-sm text-gray-600">Montagem técnica, limpa e com compromisso nos prazos.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12">O que dizem nossos clientes</h2>
+            <div class="flex overflow-x-auto gap-6 pb-6 snap-x">
+                <div class="flex-none w-80 bg-white p-8 shadow-sm rounded border-l-4 border-amber-600 snap-start">
+                    <img src="https://i.ibb.co/WNvxGMfR/1757454451965.jpg" class="w-12 h-12 rounded-full mb-4 object-cover">
+                    <div class="text-amber-500 mb-2">★★★★★</div>
+                    <p class="text-gray-700 italic mb-4 text-sm leading-relaxed">"Excelente atendimento desde o primeiro contato. O projeto ficou exatamente como imaginávamos e a qualidade da instalação superou nossas expectativas. Recomendo sem dúvidas."</p>
+                    <p class="font-bold text-sm">William Bicalho</p><p class="text-xs text-gray-500">Itaúna - MG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">O orçamento é gratuito?</summary><p class="mt-2 text-gray-600">Sim, realizamos o orçamento sem compromisso após entendermos sua necessidade.</p></details>
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">Vocês atendem empresas?</summary><p class="mt-2 text-gray-600">Sim, atendemos projetos residenciais e corporativos com total profissionalismo.</p></details>
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">Vocês fazem móveis residenciais?</summary><p class="mt-2 text-gray-600">Sim, desde cozinhas e quartos até áreas gourmet e banheiros.</p></details>
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">Qual o prazo médio de fabricação?</summary><p class="mt-2 text-gray-600">O prazo varia conforme a complexidade, definido claramente em contrato.</p></details>
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">Como funciona o processo de instalação?</summary><p class="mt-2 text-gray-600">Nossa equipe realiza a montagem técnica com foco em limpeza, precisão e acabamento final.</p></details>
+            <details class="border-b border-gray-200 pb-4"><summary class="font-semibold cursor-pointer flex justify-between">Atendem quais cidades?</summary><p class="mt-2 text-gray-600">Atendemos Itaúna e toda a região próxima.</p></details>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Onde estamos</h2>
+                <div class="mb-8 space-y-4">
+                    <p class="flex items-start gap-3"><span class="text-amber-500">📍</span> Rua Rui Siqueira, 21<br>Centro, Itaúna - MG, 35680-221</p>
+                    <p class="flex items-center gap-3"><span class="text-amber-500">📱</span> +55 (37) 9922-5481</p>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Rui+Siqueira+21+Itaúna+MG" target="_blank" class="inline-block border border-white px-8 py-4 font-semibold hover:bg-white hover:text-gray-900 transition">Como chegar</a>
+            </div>
+            <div class="w-full h-80 rounded overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.1065600109966!2d-44.5779032249767!3d-20.04683058141544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa38c116d9e03d5%3A0x6b4f7a77e163b27b!2sR.%20Rui%20Siqueira%2C%2021%20-%20Centro%2C%20Ita%C3%BAna%2C%20MG%2C%2035680-221!5e0!3m2!1spt-BR!2sbr!4v1721300000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <img src="https://i.ibb.co/LhD1nBG8/logo.png" alt="Logo" class="w-24 mb-4 logo-blend">
+                <h4 class="font-bold text-lg mb-2">Fort' Móveis</h4>
+                <p class="text-sm text-gray-600">Móveis planejados residenciais e comerciais. Fabricação própria com qualidade, precisão e compromisso.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navegação</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="#inicio" class="hover:text-amber-700">Início</a></li>
+                    <li><a href="#projetos" class="hover:text-amber-700">Projetos</a></li>
+                    <li><a href="#transformacao" class="hover:text-amber-700">Transformação</a></li>
+                    <li><a href="#depoimentos" class="hover:text-amber-700">Clientes</a></li>
+                    <li><a href="#contato" class="hover:text-amber-700">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contato</h4>
+                <p class="text-sm text-gray-600">Rua Rui Siqueira, 21<br>Centro, Itaúna/MG<br>+55 (37) 9922-5481</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Horário</h4>
+                <p class="text-sm text-gray-600">Seg-Qui: 07h-17h<br>Sex: 07h-16h<br>Sáb: 07h-12h<br>Dom: Fechado</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-300 text-center text-sm text-gray-500">
+            © 2026 Fort' Móveis — Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+        }
+    </script>
+</body>
+</html>
